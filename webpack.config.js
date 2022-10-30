@@ -16,13 +16,16 @@ module.exports = {
                     sources: false
                 }
             },
+
+            // Aqui configure styles.css por mia.scss
             {
                 test: /\.css$/,
-                exclude: /styles.css$/,
+                exclude: /mia.scss$/,
                 use: ['style-loader', 'css-loader']
             },
+            //Y aqui igual
             {
-                test: /styles.css$/,
+                test: /mia.scss$/,
                 use: [ MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
@@ -42,9 +45,12 @@ module.exports = {
             filename: '[name].css',
             ignoreOrder: false
         }),
+
+        //Aqui cambie la dirreción de donde se va a guardar las imagenes
+        //Cambie assests por imagenes y borre la carpeta /assets/img
         new CopyPlugin({
             patterns: [
-                {from: 'src/assets/', to: 'assets/'}
+                {from: 'src/imagenes/', to: 'imagenes/'}
             ]
         })
     ]

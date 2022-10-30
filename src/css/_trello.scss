@@ -1,0 +1,47 @@
+@mixin html2Normal{
+    .html2.twelve.columns{
+        .tablero {
+            background-color: map.get($temaNormal, "fondoTablero");
+        }
+    
+    
+        .panel {
+            background-color: map.get($temaNormal, "fondoPanel");
+        }
+        
+        .tarjetas {
+            background-color: map.get($temaNormal, "fondoTarjetas");
+        }
+    
+        button{
+            background-color: map.get($temaNormal, "fondoPanelBoton");
+            &:hover{
+                background-color: map.get($temaNormal, "fondoPanelBotonHover");
+            }
+        }
+    }
+}
+
+@mixin html2Invertido{
+    .html2.twelve.columns{
+        .tablero {
+            background-color: map.get($temaInvertido, "fondoTablero");
+        }
+    
+    
+        .panel {
+            background-color: map.get($temaInvertido, "fondoPanel");
+        }
+        
+        .tarjetas {
+            background-color: map.get($temaInvertido, "fondoTarjetas");
+        }
+    
+        button{
+            background-color: map.get($temaInvertido, "fondoPanelBoton");
+            &:hover{
+                background-color: map.get($temaInvertido, "fondoPanelBotonHover");
+            }
+        }
+    }
+}
