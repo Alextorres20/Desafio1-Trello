@@ -1,6 +1,16 @@
-import { saludar } from './js/componentes';
-import './styles.css';
+import './css/mia.css';
 
-const nombre = 'Inma';
+import { mostrarSubMenu, mostrarTemaNormal, mostrarTemaInvertido , mostrarOpcionesTarea, salirOpcionesTarea} from './js/componentes';
 
-saludar( nombre );
+mostrarSubMenu();
+mostrarTemaNormal();
+mostrarTemaInvertido();
+mostrarOpcionesTarea();
+salirOpcionesTarea();
+
+// import { saludar } from './js/componentes';
+
+
+// const nombre = 'Inma';
+
+// saludar( nombre );

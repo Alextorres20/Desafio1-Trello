@@ -1,0 +1,266 @@
+@use "sass:map";
+@import 'normalize', 'skeleton','menu', 'trello', 'paletaColores.scss', 'opcionesTarjeta';
+
+$linea-negra: 2px solid black;
+
+
+@mixin centrado{
+    text-align: center;
+}
+
+@mixin izquierdo{
+    text-align: left;
+}
+@mixin derecho{
+    text-align: right;
+}
+
+@mixin lineaVerticaDerecho{
+    border-right: $linea-negra;
+}
+@mixin lineaVerticalIzquierdo{
+    border-left: $linea-negra;
+}
+
+@mixin lineaHorizontalTop{
+    border-top: $linea-negra;
+}
+
+@mixin lineaHorizontalBottom{
+    border-bottom: $linea-negra;
+}
+body {
+    
+    padding-bottom: 2em;
+    position: relative;
+    min-height: 100vh;
+
+    .titulo{
+        @include centrado();
+    }
+    input[type="text"]{
+        border-radius: 2em;
+        padding-left: 35px;
+    }
+    #lupa{
+        position: absolute;
+        border-style: none;
+    }
+
+    button{
+        height: 50%;
+        margin: 0px 5px 0px 20px;
+        width: 100%;
+        padding: 0px;
+        font-size: 10px;
+    }
+    img {
+        width: 25px;
+        border: $linea-negra;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    
+    ul.menu {
+        width:100%;
+        border: $linea-negra;
+        border-radius: 15px;
+        list-style: none;
+        margin: 20px 20px;
+        li{
+            border-bottom: $linea-negra;
+            margin-bottom: 0;
+            &:first-child{
+                border-radius: 15px 15px 0px 0px;
+            }
+            &:last-child{
+                border-bottom-style: none;
+                border-radius: 0px 0px 15px 15px;
+            }
+            a{
+                text-decoration: none;
+            }
+
+            ul.sub-menu{
+                width: 100%;
+                list-style: none;
+                
+                margin: 0px;
+                display: none;
+    
+                &.activo{
+                    display: block;
+                }
+                li{
+                    font-size: 15px;
+                    border-top: $linea-negra;
+                    border-bottom-style: none;
+                    border-radius: unset;
+                }
+            }
+        }
+        // 
+        
+        
+    }
+    
+
+    ul.menu-horizontal{
+        list-style: none;
+        padding: 0;
+        margin: 0em -1em 1em 0em;
+        margin-bottom: 0;
+
+        li{
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 0;
+
+            a{
+                text-decoration: none;
+                padding: 5px;
+                display: block;
+            }
+        }
+        
+        
+    }
+
+    .html2.twelve.columns{
+
+        p,h1,h2,h3,h4{
+            color:black;
+            @include centrado();
+            margin-top:10px;
+            margin-left: 10px;
+        }
+        button{
+            color:black;
+            padding: 0px 5px 0px 5px;
+            margin: 5px 0px 0px 10px;
+            height: 40px;
+            width: 30px;
+            border-style: outset;
+        }
+        .titulo{
+            @include centrado();
+        }
+        
+        .tablero {
+            border: 2px solid white;
+            padding: 1em;
+            margin-right: 2em;
+        }
+    
+    
+        .panel {
+            border: 2px solid black;
+            padding: 1em;
+            border-radius: 1em;
+        }
+        
+        .tarjetas {
+            border-radius: 10px;
+            padding: 2em;
+            margin-top: 1em;
+            border: 1px solid black;
+        }
+        .mas{
+            margin-top: 5px;
+            border: 2px outset grey;
+            border-top-style: none;
+            border-bottom-style: none;
+        }
+    }
+    
+    @include opcionesTarjeta();
+
+    footer{
+        border: $linea-negra;
+        
+        position: absolute;
+        margin-bottom: -2em;
+        bottom: 0%;
+        width: 100%;
+    }
+
+    .nine.columns.linea-VerticalIzquierdo.linea-HorizontalTop{
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    
+    
+    .linea-VerticalIzquierdo{
+        border-left: $linea-negra;
+    }
+    
+    .linea-HorizontalTop{
+        border-top: $linea-negra;
+    }
+    .six.columns.titulo>p{
+        margin-top: 15%;
+    }
+    
+    .izquierdo{
+        @include izquierdo();
+    }
+    
+    .derecho{
+        @include derecho();
+    }
+}
+
+body.tema.normal{
+    background-color:map.get($temaNormal, "fondoGeneral");
+    p, h1, h2, h3, h4{
+        color: map.get($temaNormal, "colorLetra");
+    }
+    button{
+        color: map.get($temaNormal, "colorLetra");
+        background-color: map.get($temaNormal, "fondoBoton");
+        &:hover{
+            background-color: map.get($temaNormal, "fondoBotonHover");
+        }
+    }
+
+
+    @include menuVerticalNormal();
+
+    @include menuHorizontalNormal();
+    @include html2Normal();
+
+    footer{
+        background-color: map.get($temaNormal, "fondoFooter-MenuHover-BotonHover");
+    }
+}
+body.tema.invertido{
+    background-color: map.get($temaInvertido, "fondoGeneral");
+    p, h1, h2, h3, h4{
+        color:map.get($temaInvertido, "colorLetra");
+    }
+    button{
+        color: map.get($temaInvertido, "colorLetra");
+        background-color: map.get($temaInvertido, "fondoBoton");
+        &:hover{
+            background-color: map.get($temaInvertido, "fondoBotonHover");
+        }
+    }
+    @include menuVerticalInvertido();
+
+    @include menuHorizontalInvertido();
+
+    @include html2Invertido();
+    footer{
+        background-color: map.get($temaInvertido, "fondoFooter-MenuHover-BotonHover");
+    }
+}
+
+
+
+
+
+
+
+
+

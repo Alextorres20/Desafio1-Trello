@@ -1,0 +1,73 @@
+@mixin menuVerticalNormal(){
+    ul.menu{
+        background-color: map.get($temaNormal, "fondoMenuVertical");
+        li a{
+            color:map.get($temaNormal, "colorLetra");
+        }
+        & li:hover{
+            background-color: map.get($temaNormal, "fondoFooter-MenuHover-BotonHover");
+        }
+        ul.sub-menu{
+            background-color: map.get($temaNormal, "fondoSubMenuVertical");
+        }
+    }
+}
+
+@mixin menuVerticalInvertido(){
+    ul.menu{
+        background-color: map.get($temaInvertido, "fondoMenuVertical");
+        li a{
+            color: map.get($temaInvertido, "colorLetra");
+        }
+        & li:hover{
+            background-color: map.get($temaInvertido, "fondoFooter-MenuHover-BotonHover");
+        }
+        ul.sub-menu{
+            background-color: map.get($temaInvertido, "fondoSubMenuVertical");
+        }
+    }
+}
+
+@mixin menuHorizontalNormal(){
+    ul.menu-horizontal{
+        
+        li{
+            float:left;
+            padding: 10px 10px;
+            background-color:map.get($temaNormal, "fondoMenuHorizontal");
+            border: $linea-negra;
+            &:hover{
+                background-color: map.get($temaNormal, "fondoFooter-MenuHover-BotonHover");
+            }
+        }
+        
+        li a{
+            color:map.get($temaNormal, "colorLetra");
+        }
+
+        
+
+        
+    }
+}
+
+@mixin menuHorizontalInvertido(){
+    ul.menu-horizontal{
+        li{
+            padding: 1em 1em;
+            background-color: map.get($temaInvertido, "fondoMenuHorizontal");
+            border: $linea-negra;
+            border-radius: 20px 20px 0px 0px;
+            &:hover{
+                background-color: map.get($temaInvertido, "fondoFooter-MenuHover-BotonHover");
+            }
+        }
+        
+
+        li a{
+            color:map.get($temaInvertido, "colorLetra");
+        }
+    }
+    
+}
+
