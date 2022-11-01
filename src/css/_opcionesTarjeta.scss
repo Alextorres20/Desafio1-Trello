@@ -22,14 +22,72 @@
                 left: 25%;
                 top: 30%;
 
+                textarea.escribir.Descripcion{
+                    width: 100%;
+                    height: 10%;
+                }
+                input{
+                    padding-left: 0;
+                    border-radius: unset;
+                    text-align: left;
+                    
+                    &.escribir.Descripcion{
+                        width: 100%;
+                        height: 20%;
+                    }
+                }
+
                 button.salirTarjeta{
                     position: absolute;
-                    top:0;
+                    bottom:0;
                     right: 0;
+                    width: 50%;
                     border-radius: unset;
-                    margin-right: 1em;
+                }
+                button.guardarTarjeta{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 50%;
+                    margin: 0;
+                    border-radius: unset;
+                }
+                button.añadirTarea{
+                    position: absolute;
+                    bottom: 25%;
+                    left: 2%;
+                    margin:0;
+                    width: 25%;
+                    background-color: #80808080 ;
+                    color: black;
                 }
             }
+        }
+    }
+}
+
+@mixin opcionesTarjetaNormal{
+    div.contenido{
+        background-color: map.get($temaNormal, 'fondoTarjetas');
+
+        button.salirTarjeta{
+            background-color: map.get($temaNormal, 'botonCancelar');
+        }
+        button.guardarTarjeta{
+            background-color: map.get($temaNormal, 'botonConfirmacion');
+        }
+    }
+}
+
+@mixin opcionesTarjetaInvertido{
+    div.contenido{
+        background-color: map.get($temaInvertido, 'fondoTarjetas');
+
+        button.salirTarjeta{
+            background-color: map.get($temaInvertido, 'botonCancelar');
+        }
+        button.guardarTarjeta{
+            background-color: map.get($temaInvertido, 'botonConfirmacion');
         }
     }
 }

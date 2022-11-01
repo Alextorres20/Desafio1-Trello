@@ -44,10 +44,6 @@
         li a{
             color:map.get($temaNormal, "colorLetra");
         }
-
-        
-
-        
     }
 }
 
@@ -71,3 +67,11 @@
     
 }
 
+@mixin menuHamburguesaNormal(){
+    background-color: map.get($temaNormal, "fondoGeneral");
+}
+
+@mixin menuHamburguesaInvertido(){
+    background-color: map.get($temaInvertido, "fondoGeneral");
+    
+}
