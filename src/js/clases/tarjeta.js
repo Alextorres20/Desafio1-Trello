@@ -1,12 +1,10 @@
-class Tarjeta {
+export class Tarjeta {
 
-    titulo = "";
-    descripcion = "";
-    checklist = "";
-    constructor(titulo, descripcion, checklist){
-        this.titulo      = titulo;
-        this.descripcion = descripcion;
-        this.checklist = checklist;
+    constructor(tarjeta){
+        this.tarjeta  = tarjeta;
+        this.id = new Date().getTime();
+        this.completado = false;
+        this.creado = new Date();
     }
 }
 

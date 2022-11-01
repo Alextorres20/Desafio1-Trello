@@ -27,17 +27,24 @@ export const mostrarSubMenu = () => {
 }
 
 export const mostrarTemaNormal = () => {
-    document.querySelector("button.tema-normal").addEventListener("click", function(){
-        document.querySelector("body").classList.remove("invertido");
-        document.querySelector("body").classList.add("normal");
-    });
+    const boton = document.querySelectorAll("button.tema-normal");
+    boton.forEach(function(item){
+        item.addEventListener("click", function(){
+            document.querySelector("body").classList.remove("invertido");
+            document.querySelector("body").classList.add("normal");
+        })
+    })
 }
 
 export const mostrarTemaInvertido = () => {
-    document.querySelector("button.tema-invertido").addEventListener("click", function(){
-        document.querySelector("body").classList.remove("normal");
-        document.querySelector("body").classList.add("invertido");
-    });
+
+    const boton = document.querySelectorAll("button.tema-invertido");
+    boton.forEach(function(item){
+        item.addEventListener("click",function(){
+            document.querySelector("body").classList.remove("normal");
+            document.querySelector("body").classList.add("invertido");
+        })
+    })
 }
 
 export const mostrarOpcionesTarea = () => {

@@ -1,9 +1,15 @@
-//Referencia a HTML
+import { Tarjeta } from "./clases";
+import { ListaTarjeta } from "./clases";
 
+
+//Referencia a HTML
 const tarjetas = document.querySelectorAll(".tarjetas");
 const paneles = document.querySelectorAll(".tarjetasColocadas");
 
-//Hasta aqui me quede
+
+
+
+
 tarjetas.forEach(tarjeta => {
     
     tarjeta.addEventListener('dragstart', dragStart);
