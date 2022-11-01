@@ -427,8 +427,8 @@ th {
     padding: 0;
   }
 }
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than 750px */
+@media (min-width: 750px) {
   .container {
     width: 80%;
   }
@@ -475,6 +475,124 @@ th {
     width: 91.3333333333%;
   }
   .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+  .one-third.column {
+    width: 30.6666666667%;
+  }
+  .two-thirds.column {
+    width: 65.3333333333%;
+  }
+  .one-half.column {
+    width: 48%;
+  }
+  /* Offsets */
+  .offset-by-one.column,
+.offset-by-one.columns {
+    margin-left: 8.6666666667%;
+  }
+  .offset-by-two.column,
+.offset-by-two.columns {
+    margin-left: 17.3333333333%;
+  }
+  .offset-by-three.column,
+.offset-by-three.columns {
+    margin-left: 26%;
+  }
+  .offset-by-four.column,
+.offset-by-four.columns {
+    margin-left: 34.6666666667%;
+  }
+  .offset-by-five.column,
+.offset-by-five.columns {
+    margin-left: 43.3333333333%;
+  }
+  .offset-by-six.column,
+.offset-by-six.columns {
+    margin-left: 52%;
+  }
+  .offset-by-seven.column,
+.offset-by-seven.columns {
+    margin-left: 60.6666666667%;
+  }
+  .offset-by-eight.column,
+.offset-by-eight.columns {
+    margin-left: 69.3333333333%;
+  }
+  .offset-by-nine.column,
+.offset-by-nine.columns {
+    margin-left: 78%;
+  }
+  .offset-by-ten.column,
+.offset-by-ten.columns {
+    margin-left: 86.6666666667%;
+  }
+  .offset-by-eleven.column,
+.offset-by-eleven.columns {
+    margin-left: 95.3333333333%;
+  }
+  .offset-by-one-third.column,
+.offset-by-one-third.columns {
+    margin-left: 34.6666666667%;
+  }
+  .offset-by-two-thirds.column,
+.offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%;
+  }
+  .offset-by-one-half.column,
+.offset-by-one-half.columns {
+    margin-left: 52%;
+  }
+}
+/* For devices smaller than 550px */
+@media (max-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column,
+.columns {
+    margin-left: 4%;
+  }
+  .column:first-child,
+.columns:first-child {
+    margin-left: 0;
+  }
+  .s-one.column,
+.s-one.columns {
+    width: 4.6666666667%;
+  }
+  .s-two.columns {
+    width: 13.3333333333%;
+  }
+  .s-three.columns {
+    width: 22%;
+  }
+  .s-four.columns {
+    width: 30.6666666667%;
+  }
+  .s-five.columns {
+    width: 39.3333333333%;
+  }
+  .s-six.columns {
+    width: 48%;
+  }
+  .s-seven.columns {
+    width: 56.6666666667%;
+  }
+  .s-eight.columns {
+    width: 65.3333333333%;
+  }
+  .s-nine.columns {
+    width: 74%;
+  }
+  .s-ten.columns {
+    width: 82.6666666667%;
+  }
+  .s-eleven.columns {
+    width: 91.3333333333%;
+  }
+  .s-twelve.columns {
     width: 100%;
     margin-left: 0;
   }
@@ -931,12 +1049,17 @@ body {
   position: relative;
   min-height: 100vh;
 }
+body.opacidad {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
 body .titulo {
   text-align: center;
 }
 body input[type=text] {
   border-radius: 2em;
   padding-left: 35px;
+  width: 100%;
 }
 body #lupa {
   position: absolute;
@@ -954,6 +1077,29 @@ body img {
   border: 2px solid black;
   border-radius: 5px;
   margin: 5px;
+}
+body img.menuHamburguesa {
+  background-color: white;
+}
+body .contenedor-Acordeon {
+  box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+body .contenedor-Acordeon p {
+  text-align: center;
+}
+body .contenedor-Acordeon.activado {
+  transform: translate(-600px);
+}
+body .contenedor-Acordeon button {
+  width: 75%;
 }
 body ul.menu {
   width: 100%;
@@ -991,6 +1137,10 @@ body ul.menu li ul.sub-menu li {
   border-bottom-style: none;
   border-radius: unset;
 }
+body ul.menu.enAcordeon {
+  width: 75%;
+  margin: 30px 35px;
+}
 body ul.menu-horizontal {
   list-style: none;
   padding: 0;
@@ -1021,9 +1171,6 @@ body .html2.twelve.columns button {
   width: 30px;
   border-style: outset;
 }
-body .html2.twelve.columns .titulo {
-  text-align: center;
-}
 body .html2.twelve.columns .tablero {
   border: 2px solid white;
   padding: 1em;
@@ -1033,12 +1180,15 @@ body .html2.twelve.columns .panel {
   border: 2px solid black;
   padding: 1em;
   border-radius: 1em;
+  margin-left: 0px;
+  margin-right: 1em;
 }
 body .html2.twelve.columns .tarjetas {
   border-radius: 10px;
   padding: 2em;
   margin-top: 1em;
   border: 1px solid black;
+  margin-left: 0;
 }
 body .html2.twelve.columns .mas {
   margin-top: 5px;
@@ -1067,12 +1217,42 @@ body .añadirTarjeta.activo div.contenido {
   left: 25%;
   top: 30%;
 }
+body .añadirTarjeta.activo div.contenido textarea.escribir.Descripcion {
+  width: 100%;
+  height: 10%;
+}
+body .añadirTarjeta.activo div.contenido input {
+  padding-left: 0;
+  border-radius: unset;
+  text-align: left;
+}
+body .añadirTarjeta.activo div.contenido input.escribir.Descripcion {
+  width: 100%;
+  height: 20%;
+}
 body .añadirTarjeta.activo div.contenido button.salirTarjeta {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+  width: 50%;
   border-radius: unset;
-  margin-right: 1em;
+}
+body .añadirTarjeta.activo div.contenido button.guardarTarjeta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: 0;
+  border-radius: unset;
+}
+body .añadirTarjeta.activo div.contenido button.añadirTarea {
+  position: absolute;
+  bottom: 25%;
+  left: 2%;
+  margin: 0;
+  width: 25%;
+  background-color: rgba(128, 128, 128, 0.5019607843);
+  color: black;
 }
 body footer {
   border: 2px solid black;
@@ -1100,6 +1280,16 @@ body .izquierdo {
 body .derecho {
   text-align: right;
 }
+@media (max-width: 750px) {
+  body div.desaparece {
+    display: none;
+  }
+}
+@media (min-width: 750px) {
+  body .aparece {
+    display: none;
+  }
+}
 
 body.tema.normal {
   background-color: #371B58;
@@ -1110,6 +1300,9 @@ body.tema.normal p, body.tema.normal h1, body.tema.normal h2, body.tema.normal h
 body.tema.normal button {
   color: white;
   background-color: #5B4B8A;
+}
+body.tema.normal .contenedor-Acordeon {
+  background-color: #371B58;
 }
 body.tema.normal ul.menu {
   background-color: #5B4B8A;
@@ -1150,6 +1343,15 @@ body.tema.normal .html2.twelve.columns button {
 body.tema.normal .html2.twelve.columns button:hover {
   background-color: #FB558C;
 }
+body.tema.normal .html2.twelve.columns div.contenido {
+  background-color: #FFE6F7;
+}
+body.tema.normal .html2.twelve.columns div.contenido button.salirTarjeta {
+  background-color: red;
+}
+body.tema.normal .html2.twelve.columns div.contenido button.guardarTarjeta {
+  background-color: green;
+}
 body.tema.normal footer {
   background-color: #4C3575;
 }
@@ -1163,6 +1365,9 @@ body.tema.invertido p, body.tema.invertido h1, body.tema.invertido h2, body.tema
 body.tema.invertido button {
   color: black;
   background-color: #CDFCF6;
+}
+body.tema.invertido .contenedor-Acordeon {
+  background-color: #8BBCCC;
 }
 body.tema.invertido ul.menu {
   background-color: #98A8F8;
@@ -1202,6 +1407,15 @@ body.tema.invertido .html2.twelve.columns button {
 }
 body.tema.invertido .html2.twelve.columns button:hover {
   background-color: #98A8F8;
+}
+body.tema.invertido .html2.twelve.columns div.contenido {
+  background-color: #BCCEF8;
+}
+body.tema.invertido .html2.twelve.columns div.contenido button.salirTarjeta {
+  background-color: blue;
+}
+body.tema.invertido .html2.twelve.columns div.contenido button.guardarTarjeta {
+  background-color: yellow;
 }
 body.tema.invertido footer {
   background-color: #98A8F8;

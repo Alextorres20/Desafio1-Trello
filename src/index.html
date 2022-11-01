@@ -8,7 +8,7 @@
 </head>
 <body class="tema normal">
     <div class="row">
-        <div class="three columns">
+        <div class="three columns desaparece">
             <div class="row">
                 <div class="six columns">
                     <div class="row">
@@ -29,34 +29,107 @@
                 </div>
             </div>
         </div>
-        <div class="nine columns">
+        <div class="s-twelve columns nine columns">
             <div class="row">
-                <div class="one column casa">
+                <div class="one column casa desaparece">
                     <img src="imagenes/casa.png" alt="casa logo">
                 </div>
-                <div class="one column lupa">
+                <div class="s-one columns menu-Acordeon aparece">
+                    <img class="menuHamburguesa" src="imagenes/Menú-hamburguesa.png">
+                    <div class="row contenedor-Acordeon activado">
+                        <div class="s-twelve columns">
+                            <div class="row">
+                                <div class="s-four columns">
+                                    <br>
+                                </div>
+                                <div class="s-four columns">
+                                    <p>Trello-Torres</p>
+                                </div>
+                                <div class="s-four columns">
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="s-four columns">
+                                    <br>
+                                </div>
+                                <div class="s-four columns">
+                                    <img src="imagenes/casa.png" alt="casa logo">
+                                </div>
+                                <div class="s-four columns">
+                                    <br>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="s-twelve columns">
+                            <div class="row">
+                                <div class="s-six columns">
+                                    <img src="imagenes/mas.png" alt="mas logo">
+                                </div>
+                                <div class="s-six columns">
+                                    <img src="imagenes/campana.png" alt="campana logo">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="s-twelve columns">
+                            <p>Alex_torres_20</p>
+                        </div>
+                        <div class="s-twelve columns">
+                            <div class="row">
+                                <div class="s-six columns">
+                                    <button class="tema-normal" value="Normal">Normal</button>
+                                </div>
+                                <div class="s-six columns">
+                                    <button class="tema-invertido" value="Invertido">Invertido</button>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="s-twelve columns">
+                            <ul class="menu enAcordeon">
+                                <li><a href="#">Inicio</a></li>
+                                <li class="opciones"><a href="#">Proyectos</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Conseguir EnviarCorreo</a></li>
+                                        <li><a href="#">Diseña un juego de lucha</a></li>
+                                    </ul>
+                                </li>
+                                <li class="opciones"><a href="#">Contribuidores</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Fernando</a></li>
+                                        <li><a href="#">Jaime</a></li>
+                                        <li><a href="#">Khattari</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Menu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-one column one column lupa">
                     <img src="imagenes/buscador.png" id="lupa" alt="lupa">
                 </div>
-                <div class="three columns buscador">
+                <div class="s-four columns three columns buscador">
                     <input type="text" alt="buscador" placeholder="Buscador">
                 </div>
-                <div class="four columns titulo linea-Vertical">
+                <div class="s-five columns four columns titulo linea-Vertical">
                     <h4>Desafio 1 Alejandro</h4>
                 </div>
-                <div class="one column">
+                <div class="one column desaparece">
                     <img src="imagenes/mas.png" alt="mas logo">
                 </div>
-                <div class="one column">
+                <div class="one column desaparece">
                     <img src="imagenes/campana.png" alt="campana logo">
                 </div>
-                <div class="one column">
+                <div class="s-one column one column">
                     <img src="imagenes/caraSonriente.png" alt="cara logo">
                 </div>
             </div>        
         </div>
     </div>
     <div class="row">
-        <div class="three columns">
+        <div class="three columns desaparece">
             <div class="row">
                 <div class="six columns">
                     <button class="tema-normal" value="Normal">Normal</button>
@@ -117,14 +190,14 @@
                                     <p>Titulo del panel 1</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="twelve columns tarjetas">
+                            <div class="row tarjetasColocadas">
+                                <div id="tarjet1-1" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 1</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta1-2" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 2</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta1-3" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 3</p>
                                 </div>
                             </div>
@@ -150,14 +223,14 @@
                                     <p>Titulo del panel 2</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="twelve columns tarjetas">
+                            <div class="row tarjetasColocadas">
+                                <div id="tarjeta2-1" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 1</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta2-2" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 2</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta2-3" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 3</p>
                                 </div>
                             </div>
@@ -183,14 +256,14 @@
                                     <p>Titulo del panel 3</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="twelve columns tarjetas">
+                            <div class="row tarjetasColocadas">
+                                <div id="tarjeta3-1" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 1</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta3-2" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 2</p>
                                 </div>
-                                <div class="twelve columns tarjetas">
+                                <div id="tarjeta3-3" class="twelve columns tarjetas" draggable="true">
                                     <p>Tarjeta 3</p>
                                 </div>
                             </div>
@@ -213,13 +286,18 @@
                     </div>
                     <div class="añadirTarjeta">
                         <div class="contenido">
-                            Mis tareas
-                            <button class="salirTarjeta">X</button>
+                            <label>Titulo:</label>
+                            <input type="text" class="titulo tarjeta" placeholder="titulo de tarjeta">
+                            <label>Descripción</label>
+                            <input type="text" class="escribir Descripcion" placeholder="Añade una descripción"></textarea>
                             <div class="barraDeProgreso">
                                 <div class="barra">
-        
+                                    
                                 </div>
                             </div>
+                            <button class="añadirTarea">Añadir Tarea</button>
+                            <button class="guardarTarjeta">Guardar Tarjeta</button>
+                            <button class="salirTarjeta">X</button>
                         </div>
                     </div>
                 </div>

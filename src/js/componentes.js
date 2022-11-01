@@ -1,4 +1,21 @@
 // import webpacklogo from '../assets/img/webpack-logo.png'
+export const mostrarAcordeon = () => {
+    const iconoHamburguesa = document.querySelector('.menu-Acordeon');
+    const contenido = document.querySelector('.contenedor-Acordeon');
+    iconoHamburguesa.addEventListener('click', (e) =>{
+        contenido.classList.toggle('activado');
+        document.body.classList.toggle('opacidad');
+
+        const rutaActual = e.target.getAttribute('src');
+        if(rutaActual == '../../imagenes/Menú-hamburguesa.png'){
+            e.target.setAttribute('src','../../imagenes/Menú-hamburguesa.png');
+        }
+        else{
+            e.target.setAttribute('src','../../imagenes/Menú-hamburguesa2.png');
+        }
+    })
+}
+
 export const mostrarSubMenu = () => {
     const menu = document.querySelectorAll('.opciones');
     menu.forEach(function(item){
@@ -38,14 +55,15 @@ export const salirOpcionesTarea = () => {
     })
 }
 
-export const saludar = ( nombre ) => {
-    console.log('Creando etiqueta h1');
-    const h1 = document.createElement('h1');
-    h1.innerText = `Hola, ${nombre}!!!!`;
-    document.body.append(h1);
 
-    // Img
-    // const img = document.createElement('img');
-    // img.src = webpacklogo;
-    // document.body.append( img );
-} 
+// export const saludar = ( nombre ) => {
+//     console.log('Creando etiqueta h1');
+//     const h1 = document.createElement('h1');
+//     h1.innerText = `Hola, ${nombre}!!!!`;
+//     document.body.append(h1);
+
+//     // Img
+//     // const img = document.createElement('img');
+//     // img.src = webpacklogo;
+//     // document.body.append( img );
+// } 

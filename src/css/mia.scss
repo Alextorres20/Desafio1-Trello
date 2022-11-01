@@ -30,7 +30,11 @@ $linea-negra: 2px solid black;
     border-bottom: $linea-negra;
 }
 body {
-    
+    &.opacidad{
+        background-color: rgba(0,0,0,0.5);
+        transition: all .5s ease;
+    }
+
     padding-bottom: 2em;
     position: relative;
     min-height: 100vh;
@@ -41,6 +45,7 @@ body {
     input[type="text"]{
         border-radius: 2em;
         padding-left: 35px;
+        width: 100%;
     }
     #lupa{
         position: absolute;
@@ -59,8 +64,32 @@ body {
         border: $linea-negra;
         border-radius: 5px;
         margin: 5px;
+        &.menuHamburguesa{
+            background-color: white;
+        }
     }
 
+    .contenedor-Acordeon{
+        box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+        width: 400px;
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+
+        p{
+            @include centrado();
+        }
+
+        &.activado{
+            transform: translate(-600px);
+        }
+        button{
+            width: 75%;
+        }
+    }
+    
     
     ul.menu {
         width:100%;
@@ -101,8 +130,10 @@ body {
             }
         }
         // 
-        
-        
+        &.enAcordeon{
+            width: 75%;
+            margin: 30px 35px;
+        }
     }
     
 
@@ -143,9 +174,6 @@ body {
             width: 30px;
             border-style: outset;
         }
-        .titulo{
-            @include centrado();
-        }
         
         .tablero {
             border: 2px solid white;
@@ -158,6 +186,8 @@ body {
             border: 2px solid black;
             padding: 1em;
             border-radius: 1em;
+            margin-left: 0px;
+            margin-right: 1em;
         }
         
         .tarjetas {
@@ -165,6 +195,7 @@ body {
             padding: 2em;
             margin-top: 1em;
             border: 1px solid black;
+            margin-left: 0;
         }
         .mas{
             margin-top: 5px;
@@ -209,6 +240,19 @@ body {
     .derecho{
         @include derecho();
     }
+
+    @media (max-width: 750px) {
+        div.desaparece{
+            display: none;
+        }
+        
+    }
+    
+    @media (min-width: 750px) {
+        .aparece{
+            display: none;
+        }
+    }
 }
 
 body.tema.normal{
@@ -223,12 +267,18 @@ body.tema.normal{
             background-color: map.get($temaNormal, "fondoBotonHover");
         }
     }
-
-
+    .contenedor-Acordeon{
+        @include menuHamburguesaNormal();
+    }
+    
     @include menuVerticalNormal();
 
     @include menuHorizontalNormal();
     @include html2Normal();
+    .html2.twelve.columns{
+        @include opcionesTarjetaNormal();
+    }
+    
 
     footer{
         background-color: map.get($temaNormal, "fondoFooter-MenuHover-BotonHover");
@@ -246,21 +296,22 @@ body.tema.invertido{
             background-color: map.get($temaInvertido, "fondoBotonHover");
         }
     }
+
+    .contenedor-Acordeon{
+        @include menuHamburguesaInvertido();
+    }
+    
     @include menuVerticalInvertido();
 
     @include menuHorizontalInvertido();
 
     @include html2Invertido();
+
+    .html2.twelve.columns{
+        @include opcionesTarjetaInvertido();
+    }
     footer{
         background-color: map.get($temaInvertido, "fondoFooter-MenuHover-BotonHover");
     }
 }
-
-
-
-
-
-
-
-
 
