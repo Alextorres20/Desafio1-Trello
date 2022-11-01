@@ -10,7 +10,9 @@ $temaNormal:(
     "fondoPanel": #C689C6,
     "fondoTarjetas": #FFE6F7,
     "fondoPanelBoton": #CFAACF,
-    "fondoPanelBotonHover": #FB558C
+    "fondoPanelBotonHover": #FB558C,
+    "botonConfirmacion": green,
+    "botonCancelar": red
 
 );
 
@@ -26,5 +28,7 @@ $temaInvertido:(
     "fondoPanel": #ABD9FF,
     "fondoTarjetas": #BCCEF8,
     "fondoPanelBoton": #CDFCF6,
-    "fondoPanelBotonHover": #98A8F8
+    "fondoPanelBotonHover": #98A8F8,
+    "botonConfirmacion": yellow,
+    "botonCancelar": blue
 );
