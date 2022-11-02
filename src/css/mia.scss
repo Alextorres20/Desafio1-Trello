@@ -38,7 +38,7 @@ body {
     padding-bottom: 2em;
     position: relative;
     min-height: 100vh;
-
+    
     .titulo{
         @include centrado();
     }
@@ -202,6 +202,20 @@ body {
             border: 2px outset grey;
             border-top-style: none;
             border-bottom-style: none;
+        }
+
+        .contenido{
+            select.prioridad{
+                & option[id = 'baja']{
+                    background-color: rgb(205, 246, 143);
+                }
+                & option[id = 'media']{
+                    background-color: rgb(255, 255, 106);
+                }
+                & option[id = 'alta']{
+                    background-color: rgb(250, 106, 106);
+                }
+            }
         }
     }
     

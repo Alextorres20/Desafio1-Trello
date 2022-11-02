@@ -1196,6 +1196,15 @@ body .html2.twelve.columns .mas {
   border-top-style: none;
   border-bottom-style: none;
 }
+body .html2.twelve.columns .contenido select.prioridad option[id=baja] {
+  background-color: rgb(205, 246, 143);
+}
+body .html2.twelve.columns .contenido select.prioridad option[id=media] {
+  background-color: rgb(255, 255, 106);
+}
+body .html2.twelve.columns .contenido select.prioridad option[id=alta] {
+  background-color: rgb(250, 106, 106);
+}
 body .añadirTarjeta {
   display: none;
 }
@@ -1209,13 +1218,26 @@ body .añadirTarjeta.activo {
   left: 0;
 }
 body .añadirTarjeta.activo div.contenido {
-  width: 50vw;
-  height: 30vw;
   border-radius: 10px;
   background-color: white;
   position: absolute;
-  left: 25%;
+  left: 15%;
   top: 30%;
+}
+@media (max-width: 750px) {
+  body .añadirTarjeta.activo div.contenido {
+    width: 75vw;
+    height: 100vw;
+  }
+}
+@media (min-width: 750px) {
+  body .añadirTarjeta.activo div.contenido {
+    width: 75vw;
+    height: 40vw;
+  }
+}
+body .añadirTarjeta.activo div.contenido p {
+  display: inline-block;
 }
 body .añadirTarjeta.activo div.contenido textarea.escribir.Descripcion {
   width: 100%;
@@ -1253,6 +1275,18 @@ body .añadirTarjeta.activo div.contenido button.añadirTarea {
   width: 25%;
   background-color: rgba(128, 128, 128, 0.5019607843);
   color: black;
+}
+body .añadirTarjeta.activo div.contenido .barrera.progreso {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+}
+body .añadirTarjeta.activo div.contenido .barrera.progreso div.barra {
+  height: 1em;
+  width: 0%;
+  border-radius: 5px;
+  background-color: green;
 }
 body footer {
   border: 2px solid black;

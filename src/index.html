@@ -79,10 +79,10 @@
                         <div class="s-twelve columns">
                             <div class="row">
                                 <div class="s-six columns">
-                                    <button class="acordeon tema-normal" value="Normal">Normal</button>
+                                    <button class="tema-normal" value="Normal">Normal</button>
                                 </div>
                                 <div class="s-six columns">
-                                    <button class="acordeon tema-invertido" value="Invertido">Invertido</button>
+                                    <button class="tema-invertido" value="Invertido">Invertido</button>
                                 </div>
                             </div>    
                         </div>
@@ -187,7 +187,7 @@
                         <div class="four columns panel">
                             <div class="row">
                                 <div class="twelve columns titulo">
-                                    <p>Titulo del panel 1</p>
+                                    <p>En preparación</p>
                                 </div>
                             </div>
                             <div class="row tarjetasColocadas">
@@ -220,7 +220,7 @@
                         <div class="four columns panel">
                             <div class="row">
                                 <div class="twelve columns titulo">
-                                    <p>Titulo del panel 2</p>
+                                    <p>En Proceso</p>
                                 </div>
                             </div>
                             <div class="row tarjetasColocadas">
@@ -253,7 +253,7 @@
                         <div class="four columns panel">
                             <div class="row">
                                 <div class="twelve columns titulo">
-                                    <p>Titulo del panel 3</p>
+                                    <p>Finalizado</p>
                                 </div>
                             </div>
                             <div class="row tarjetasColocadas">
@@ -285,13 +285,30 @@
                         </div>
                     </div>
                     <div class="añadirTarjeta">
-                        <div class="contenido">
-                            <label>Titulo:</label>
-                            <input type="text" class="titulo tarjeta" placeholder="titulo de tarjeta">
-                            <label>Descripción</label>
-                            <input type="text" class="escribir Descripcion" placeholder="Añade una descripción"></textarea>
-                            <div class="barraDeProgreso">
-                                <div class="barra">
+                        <div class="row contenido">
+                            <div class="six columns">
+                                <label>Titulo:</label>
+                                <input type="text" id="Titulo-Tarea" class="titulo tarjeta" placeholder="titulo de tarjeta">
+                                <label>Descripción</label>
+                                <input type="text" id="Descripcion-Tarea" class="escribir Descripcion" placeholder="Añade una descripción"></textarea>
+                            </div>
+                            <div class="six columns">
+                                <label>Prioridad:</label>
+                                <select class="prioridad">
+                                    <option id="baja">Baja</option>
+                                    <option id="media">Media</option>
+                                    <option id="alta">Alta</option>
+                                </select>    
+                            </div>
+                            <div class="twelve columns lista subTareas">    
+                                     
+                            </div>
+                            
+                            
+                            <!-- Aqui en el div justo al lado de la 'barra' se añadira una clase mas que sera 'progreso' -->
+                            <div class="twelve columns barrera">
+                                
+                                <div class="twelve columns barra">
                                     
                                 </div>
                             </div>
