@@ -433,15 +433,15 @@ th {
     width: 80%;
   }
   .column,
-.columns {
+  .columns {
     margin-left: 4%;
   }
   .column:first-child,
-.columns:first-child {
+  .columns:first-child {
     margin-left: 0;
   }
   .one.column,
-.one.columns {
+  .one.columns {
     width: 4.6666666667%;
   }
   .two.columns {
@@ -489,59 +489,59 @@ th {
   }
   /* Offsets */
   .offset-by-one.column,
-.offset-by-one.columns {
+  .offset-by-one.columns {
     margin-left: 8.6666666667%;
   }
   .offset-by-two.column,
-.offset-by-two.columns {
+  .offset-by-two.columns {
     margin-left: 17.3333333333%;
   }
   .offset-by-three.column,
-.offset-by-three.columns {
+  .offset-by-three.columns {
     margin-left: 26%;
   }
   .offset-by-four.column,
-.offset-by-four.columns {
+  .offset-by-four.columns {
     margin-left: 34.6666666667%;
   }
   .offset-by-five.column,
-.offset-by-five.columns {
+  .offset-by-five.columns {
     margin-left: 43.3333333333%;
   }
   .offset-by-six.column,
-.offset-by-six.columns {
+  .offset-by-six.columns {
     margin-left: 52%;
   }
   .offset-by-seven.column,
-.offset-by-seven.columns {
+  .offset-by-seven.columns {
     margin-left: 60.6666666667%;
   }
   .offset-by-eight.column,
-.offset-by-eight.columns {
+  .offset-by-eight.columns {
     margin-left: 69.3333333333%;
   }
   .offset-by-nine.column,
-.offset-by-nine.columns {
+  .offset-by-nine.columns {
     margin-left: 78%;
   }
   .offset-by-ten.column,
-.offset-by-ten.columns {
+  .offset-by-ten.columns {
     margin-left: 86.6666666667%;
   }
   .offset-by-eleven.column,
-.offset-by-eleven.columns {
+  .offset-by-eleven.columns {
     margin-left: 95.3333333333%;
   }
   .offset-by-one-third.column,
-.offset-by-one-third.columns {
+  .offset-by-one-third.columns {
     margin-left: 34.6666666667%;
   }
   .offset-by-two-thirds.column,
-.offset-by-two-thirds.columns {
+  .offset-by-two-thirds.columns {
     margin-left: 69.3333333333%;
   }
   .offset-by-one-half.column,
-.offset-by-one-half.columns {
+  .offset-by-one-half.columns {
     margin-left: 52%;
   }
 }
@@ -551,15 +551,15 @@ th {
     width: 80%;
   }
   .column,
-.columns {
+  .columns {
     margin-left: 4%;
   }
   .column:first-child,
-.columns:first-child {
+  .columns:first-child {
     margin-left: 0;
   }
   .s-one.column,
-.s-one.columns {
+  .s-one.columns {
     width: 4.6666666667%;
   }
   .s-two.columns {
@@ -607,59 +607,59 @@ th {
   }
   /* Offsets */
   .offset-by-one.column,
-.offset-by-one.columns {
+  .offset-by-one.columns {
     margin-left: 8.6666666667%;
   }
   .offset-by-two.column,
-.offset-by-two.columns {
+  .offset-by-two.columns {
     margin-left: 17.3333333333%;
   }
   .offset-by-three.column,
-.offset-by-three.columns {
+  .offset-by-three.columns {
     margin-left: 26%;
   }
   .offset-by-four.column,
-.offset-by-four.columns {
+  .offset-by-four.columns {
     margin-left: 34.6666666667%;
   }
   .offset-by-five.column,
-.offset-by-five.columns {
+  .offset-by-five.columns {
     margin-left: 43.3333333333%;
   }
   .offset-by-six.column,
-.offset-by-six.columns {
+  .offset-by-six.columns {
     margin-left: 52%;
   }
   .offset-by-seven.column,
-.offset-by-seven.columns {
+  .offset-by-seven.columns {
     margin-left: 60.6666666667%;
   }
   .offset-by-eight.column,
-.offset-by-eight.columns {
+  .offset-by-eight.columns {
     margin-left: 69.3333333333%;
   }
   .offset-by-nine.column,
-.offset-by-nine.columns {
+  .offset-by-nine.columns {
     margin-left: 78%;
   }
   .offset-by-ten.column,
-.offset-by-ten.columns {
+  .offset-by-ten.columns {
     margin-left: 86.6666666667%;
   }
   .offset-by-eleven.column,
-.offset-by-eleven.columns {
+  .offset-by-eleven.columns {
     margin-left: 95.3333333333%;
   }
   .offset-by-one-third.column,
-.offset-by-one-third.columns {
+  .offset-by-one-third.columns {
     margin-left: 34.6666666667%;
   }
   .offset-by-two-thirds.column,
-.offset-by-two-thirds.columns {
+  .offset-by-two-thirds.columns {
     margin-left: 69.3333333333%;
   }
   .offset-by-one-half.column,
-.offset-by-one-half.columns {
+  .offset-by-one-half.columns {
     margin-left: 52%;
   }
 }
@@ -1084,7 +1084,6 @@ body img.menuHamburguesa {
 body .contenedor-Acordeon {
   box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
   width: 400px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -1190,20 +1189,28 @@ body .html2.twelve.columns .tarjetas {
   border: 1px solid black;
   margin-left: 0;
 }
+body .html2.twelve.columns .tarjetas .contenido .imagen img {
+  width: 100%;
+}
+body .html2.twelve.columns .tarjetas .contenido .label_prioridad span {
+  color: black;
+  border-radius: 34px;
+  padding: 0.5rem 1rem;
+}
+body .html2.twelve.columns .tarjetas .contenido .label_prioridad span.prioridad.Baja {
+  background-color: rgb(205, 246, 143);
+}
+body .html2.twelve.columns .tarjetas .contenido .label_prioridad span.prioridad.Media {
+  background-color: rgb(255, 255, 106);
+}
+body .html2.twelve.columns .tarjetas .contenido .label_prioridad span.prioridad.Alta {
+  background-color: rgb(250, 106, 106);
+}
 body .html2.twelve.columns .mas {
   margin-top: 5px;
   border: 2px outset grey;
   border-top-style: none;
   border-bottom-style: none;
-}
-body .html2.twelve.columns .contenido select.prioridad option[id=baja] {
-  background-color: rgb(205, 246, 143);
-}
-body .html2.twelve.columns .contenido select.prioridad option[id=media] {
-  background-color: rgb(255, 255, 106);
-}
-body .html2.twelve.columns .contenido select.prioridad option[id=alta] {
-  background-color: rgb(250, 106, 106);
 }
 body .añadirTarjeta {
   display: none;
@@ -1217,7 +1224,7 @@ body .añadirTarjeta.activo {
   top: 0;
   left: 0;
 }
-body .añadirTarjeta.activo div.contenido {
+body .añadirTarjeta.activo div.contenidoTarjeta {
   border-radius: 10px;
   background-color: white;
   position: absolute;
@@ -1225,41 +1232,41 @@ body .añadirTarjeta.activo div.contenido {
   top: 30%;
 }
 @media (max-width: 750px) {
-  body .añadirTarjeta.activo div.contenido {
+  body .añadirTarjeta.activo div.contenidoTarjeta {
     width: 75vw;
     height: 100vw;
   }
 }
 @media (min-width: 750px) {
-  body .añadirTarjeta.activo div.contenido {
+  body .añadirTarjeta.activo div.contenidoTarjeta {
     width: 75vw;
     height: 40vw;
   }
 }
-body .añadirTarjeta.activo div.contenido p {
+body .añadirTarjeta.activo div.contenidoTarjeta p {
   display: inline-block;
 }
-body .añadirTarjeta.activo div.contenido textarea.escribir.Descripcion {
+body .añadirTarjeta.activo div.contenidoTarjeta textarea.escribir.Descripcion {
   width: 100%;
   height: 10%;
 }
-body .añadirTarjeta.activo div.contenido input {
+body .añadirTarjeta.activo div.contenidoTarjeta input {
   padding-left: 0;
   border-radius: unset;
   text-align: left;
 }
-body .añadirTarjeta.activo div.contenido input.escribir.Descripcion {
+body .añadirTarjeta.activo div.contenidoTarjeta input.escribir.Descripcion {
   width: 100%;
   height: 20%;
 }
-body .añadirTarjeta.activo div.contenido button.salirTarjeta {
+body .añadirTarjeta.activo div.contenidoTarjeta button.salirGuardarTarjeta {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 50%;
   border-radius: unset;
 }
-body .añadirTarjeta.activo div.contenido button.guardarTarjeta {
+body .añadirTarjeta.activo div.contenidoTarjeta button.guardarTarjeta {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1267,22 +1274,127 @@ body .añadirTarjeta.activo div.contenido button.guardarTarjeta {
   margin: 0;
   border-radius: unset;
 }
-body .añadirTarjeta.activo div.contenido button.añadirTarea {
-  position: absolute;
-  bottom: 25%;
-  left: 2%;
-  margin: 0;
-  width: 25%;
+body .añadirTarjeta.activo .contenidoPrioridad select.prioridad option[id=baja] {
+  background-color: rgb(205, 246, 143);
+}
+body .añadirTarjeta.activo .contenidoPrioridad select.prioridad option[id=media] {
+  background-color: rgb(255, 255, 106);
+}
+body .añadirTarjeta.activo .contenidoPrioridad select.prioridad option[id=alta] {
+  background-color: rgb(250, 106, 106);
+}
+body .añadirTarjeta.activo .Labeles .Label input[type=text] {
+  width: 75%;
+}
+body .añadirTarjeta.activo .Labeles .Label input[type=color] {
+  width: 20%;
+}
+body .añadirTarjeta.activo .Labeles .Label button.añadirTarea {
+  width: 20%;
   background-color: rgba(128, 128, 128, 0.5019607843);
   color: black;
 }
-body .añadirTarjeta.activo div.contenido .barrera.progreso {
+body .añadirTarjeta.activo .Labeles .subTareas .barrera.progreso {
   border: 1px solid black;
   border-radius: 5px;
   display: block;
   width: 80%;
 }
-body .añadirTarjeta.activo div.contenido .barrera.progreso div.barra {
+body .añadirTarjeta.activo .Labeles .subTareas .barrera.progreso div.barra {
+  height: 1em;
+  width: 0%;
+  border-radius: 5px;
+  background-color: green;
+}
+body .actualizarTarjeta {
+  display: none;
+}
+body .actualizarTarjeta.activo {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta {
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+@media (max-width: 750px) {
+  body .actualizarTarjeta.activo div.contenidoTarjeta {
+    width: 75vw;
+    height: 100vw;
+  }
+}
+@media (min-width: 750px) {
+  body .actualizarTarjeta.activo div.contenidoTarjeta {
+    width: 75vw;
+    height: 40vw;
+  }
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta p {
+  display: inline-block;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta textarea.escribir.Descripcion {
+  width: 100%;
+  height: 10%;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta input {
+  padding-left: 0;
+  border-radius: unset;
+  text-align: left;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta input.escribir.Descripcion {
+  width: 100%;
+  height: 20%;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta button.salirModificarTarjeta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  border-radius: unset;
+}
+body .actualizarTarjeta.activo div.contenidoTarjeta button.modificarTarjeta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: 0;
+  border-radius: unset;
+}
+body .actualizarTarjeta.activo .contenidoPrioridad select.prioridad option[id=baja] {
+  background-color: rgb(205, 246, 143);
+}
+body .actualizarTarjeta.activo .contenidoPrioridad select.prioridad option[id=media] {
+  background-color: rgb(255, 255, 106);
+}
+body .actualizarTarjeta.activo .contenidoPrioridad select.prioridad option[id=alta] {
+  background-color: rgb(250, 106, 106);
+}
+body .actualizarTarjeta.activo .Labeles .Label input[type=text] {
+  width: 75%;
+}
+body .actualizarTarjeta.activo .Labeles .Label input[type=color] {
+  width: 20%;
+}
+body .actualizarTarjeta.activo .Labeles .Label button.añadirTarea {
+  width: 20%;
+  background-color: rgba(128, 128, 128, 0.5019607843);
+  color: black;
+}
+body .actualizarTarjeta.activo .Labeles .subTareas .barrera.progreso {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+}
+body .actualizarTarjeta.activo .Labeles .subTareas .barrera.progreso div.barra {
   height: 1em;
   width: 0%;
   border-radius: 5px;
@@ -1377,13 +1489,19 @@ body.tema.normal .html2.twelve.columns button {
 body.tema.normal .html2.twelve.columns button:hover {
   background-color: #FB558C;
 }
-body.tema.normal .html2.twelve.columns div.contenido {
+body.tema.normal .html2.twelve.columns div.contenidoTarjeta {
   background-color: #FFE6F7;
 }
-body.tema.normal .html2.twelve.columns div.contenido button.salirTarjeta {
+body.tema.normal .html2.twelve.columns div.contenidoTarjeta button.salirGuardarTarjeta {
   background-color: red;
 }
-body.tema.normal .html2.twelve.columns div.contenido button.guardarTarjeta {
+body.tema.normal .html2.twelve.columns div.contenidoTarjeta button.guardarTarjeta {
+  background-color: green;
+}
+body.tema.normal .html2.twelve.columns div.contenidoTarjeta button.salirModificarTarjeta {
+  background-color: red;
+}
+body.tema.normal .html2.twelve.columns div.contenidoTarjeta button.modificarTarjeta {
   background-color: green;
 }
 body.tema.normal footer {
@@ -1442,14 +1560,20 @@ body.tema.invertido .html2.twelve.columns button {
 body.tema.invertido .html2.twelve.columns button:hover {
   background-color: #98A8F8;
 }
-body.tema.invertido .html2.twelve.columns div.contenido {
+body.tema.invertido .html2.twelve.columns div.contenidoTarjeta {
   background-color: #BCCEF8;
 }
-body.tema.invertido .html2.twelve.columns div.contenido button.salirTarjeta {
+body.tema.invertido .html2.twelve.columns div.contenidoTarjeta button.salirGuardarTarjeta {
   background-color: blue;
 }
-body.tema.invertido .html2.twelve.columns div.contenido button.guardarTarjeta {
+body.tema.invertido .html2.twelve.columns div.contenidoTarjeta button.guardarTarjeta {
   background-color: yellow;
+}
+body.tema.invertido .html2.twelve.columns div.contenidoTarjeta button.salirModificarTarjeta {
+  background-color: blue;
+}
+body.tema.invertido .html2.twelve.columns div.contenidoTarjeta button.modificarTarjeta {
+  background-color: green;
 }
 body.tema.invertido footer {
   background-color: #98A8F8;

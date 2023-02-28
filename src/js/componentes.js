@@ -47,20 +47,7 @@ export const mostrarTemaInvertido = () => {
     })
 }
 
-export const mostrarOpcionesTarea = () => {
-    const botonesAñadir = document.querySelectorAll("button.añadir");
-    botonesAñadir.forEach(function(boton){
-        boton.addEventListener("click", function(){
-            document.querySelector(".añadirTarjeta").classList.add("activo");
-        });
-    })
-}
 
-export const salirOpcionesTarea = () => {
-    const botonSalir = document.querySelector("button.salirTarjeta").addEventListener("click", function(){
-        document.querySelector(".añadirTarjeta").classList.remove("activo");
-    })
-}
 
 
 // export const saludar = ( nombre ) => {

@@ -196,6 +196,35 @@ body {
             margin-top: 1em;
             border: 1px solid black;
             margin-left: 0;
+            .contenido{
+                .imagen{
+                    img{
+                        width: 100%;        
+                    }
+                }
+                .label_prioridad{
+                    span{
+                        color: black;
+                        border-radius: 34px;
+                        padding: 0.5rem 1rem;
+                        &.prioridad{
+                        
+                            &.Baja{
+                                background-color: rgb(205, 246, 143)
+                            }
+                            &.Media{
+                                background-color: rgb(255, 255, 106);
+                            }
+                            &.Alta{
+                                background-color: rgb(250, 106, 106);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+
         }
         .mas{
             margin-top: 5px;
@@ -204,19 +233,7 @@ body {
             border-bottom-style: none;
         }
 
-        .contenido{
-            select.prioridad{
-                & option[id = 'baja']{
-                    background-color: rgb(205, 246, 143);
-                }
-                & option[id = 'media']{
-                    background-color: rgb(255, 255, 106);
-                }
-                & option[id = 'alta']{
-                    background-color: rgb(250, 106, 106);
-                }
-            }
-        }
+        
     }
     
     @include opcionesTarjeta();

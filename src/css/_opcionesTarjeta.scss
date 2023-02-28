@@ -13,7 +13,7 @@
             left:0;
     
     
-            div.contenido{
+            div.contenidoTarjeta{
 
                 border-radius: 10px;
                 background-color: white;
@@ -50,7 +50,7 @@
                     }
                 }
 
-                button.salirTarjeta{
+                button.salirGuardarTarjeta{
                     position: absolute;
                     bottom:0;
                     right: 0;
@@ -65,55 +65,212 @@
                     margin: 0;
                     border-radius: unset;
                 }
-                button.añadirTarea{
-                    position: absolute;
-                    bottom: 25%;
-                    left: 2%;
-                    margin:0;
-                    width: 25%;
-                    background-color: #80808080 ;
-                    color: black;
-                }
-                .barrera.progreso{
-                    border: 1px solid black;
-                    border-radius: 5px;
-                    display: block;
-                    width: 80%;
-                    div.barra{
-                        height: 1em;
-                        width: 0%;
-                        border-radius: 5px;
-                        background-color: green;
+            }
+            .contenidoPrioridad{
+                select.prioridad{
+                    & option[id = 'baja']{
+                        background-color: rgb(205, 246, 143);
                     }
-                
+                    & option[id = 'media']{
+                        background-color: rgb(255, 255, 106);
+                    }
+                    & option[id = 'alta']{
+                        background-color: rgb(250, 106, 106);
+                    }
                 }
+                
+            }
+            .Labeles{
+                .Label{
+                    input[type="text"]{
+                        width: 75%;
+                    }
+                    input[type="color"]{
+                        width: 20%;
+                    }
+                    button.añadirTarea{
+                        width: 20%;
+                        background-color: #80808080 ;
+                        color: black;
+                    }
+                }
+                
+                .subTareas{
+                    .barrera.progreso{
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        display: block;
+                        width: 80%;
+                        div.barra{
+                            height: 1em;
+                            width: 0%;
+                            border-radius: 5px;
+                            background-color: green;
+                        }
+                    
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .actualizarTarjeta{
+        display: none;
+
+        &.activo{
+            display: block;
+            background-color: rgba(0,0,0,0.5);
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            position: absolute;
+            top:0;
+            left:0;
+    
+    
+            div.contenidoTarjeta{
+
+                border-radius: 10px;
+                background-color: white;
+                position: absolute;
+                left: 15%;
+                top: 30%;
+
+                @media (max-width: 750px) {
+                    width: 75vw;
+                    height: 100vw;
+                }
+                
+                @media (min-width: 750px) {
+                    
+                    width: 75vw;
+                    height: 40vw;
+                }
+                
+                p{
+                    display: inline-block;
+                }
+                textarea.escribir.Descripcion{
+                    width: 100%;
+                    height: 10%;
+                }
+                input{
+                    padding-left: 0;
+                    border-radius: unset;
+                    text-align: left;
+                    
+                    &.escribir.Descripcion{
+                        width: 100%;
+                        height: 20%;
+                    }
+                }
+
+                button.salirModificarTarjeta{
+                    position: absolute;
+                    bottom:0;
+                    right: 0;
+                    width: 50%;
+                    border-radius: unset;
+                }
+                button.modificarTarjeta{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 50%;
+                    margin: 0;
+                    border-radius: unset;
+                }
+            }
+            .contenidoPrioridad{
+                select.prioridad{
+                    & option[id = 'baja']{
+                        background-color: rgb(205, 246, 143);
+                    }
+                    & option[id = 'media']{
+                        background-color: rgb(255, 255, 106);
+                    }
+                    & option[id = 'alta']{
+                        background-color: rgb(250, 106, 106);
+                    }
+                }
+                
+            }
+            .Labeles{
+                .Label{
+                    input[type="text"]{
+                        width: 75%;
+                    }
+                    input[type="color"]{
+                        width: 20%;
+                    }
+                    button.añadirTarea{
+                        width: 20%;
+                        background-color: #80808080 ;
+                        color: black;
+                    }
+                }
+                
+                .subTareas{
+                    .barrera.progreso{
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        display: block;
+                        width: 80%;
+                        div.barra{
+                            height: 1em;
+                            width: 0%;
+                            border-radius: 5px;
+                            background-color: green;
+                        }
+                    
+                    }
+                }
+                
             }
         }
     }
 }
 
 @mixin opcionesTarjetaNormal{
-    div.contenido{
+    div.contenidoTarjeta{
         background-color: map.get($temaNormal, 'fondoTarjetas');
 
-        button.salirTarjeta{
+        button.salirGuardarTarjeta{
             background-color: map.get($temaNormal, 'botonCancelar');
         }
+        
         button.guardarTarjeta{
             background-color: map.get($temaNormal, 'botonConfirmacion');
         }
+
+        button.salirModificarTarjeta{
+            background-color: map.get($temaNormal, 'botonCancelar');
+        }
+        button.modificarTarjeta{
+            background-color: map.get($temaNormal, 'botonConfirmacion');
+        }
+        
     }
 }
 
 @mixin opcionesTarjetaInvertido{
-    div.contenido{
+    div.contenidoTarjeta{
         background-color: map.get($temaInvertido, 'fondoTarjetas');
 
-        button.salirTarjeta{
+        button.salirGuardarTarjeta{
             background-color: map.get($temaInvertido, 'botonCancelar');
         }
+        
         button.guardarTarjeta{
             background-color: map.get($temaInvertido, 'botonConfirmacion');
         }
+
+        button.salirModificarTarjeta{
+            background-color: map.get($temaInvertido, 'botonCancelar');
+        }
+        button.modificarTarjeta{
+            background-color: map.get($temaNormal, 'botonConfirmacion');
+        }
+        
     }
 }

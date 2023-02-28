@@ -1,10 +1,9 @@
-import { contenidoTarjeta } from "./contenidoTarjeta";
+
 import { subTarea } from "./subTareas";
-import { Tarjeta } from "./tarjeta";
 import { ListaTarjeta } from "./listaTarjeta";
+import { Tarjeta } from "./Tarjeta";
 export {
-    contenidoTarjeta,
-    subTarea,
     Tarjeta,
+    subTarea,
     ListaTarjeta
 }
